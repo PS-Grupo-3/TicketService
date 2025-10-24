@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+LgdEuwJDi0=",
+  "dgSpecHash": "VANP5gVRMFY=",
   "success": true,
-  "projectFilePath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Deivid\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\Deivid\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",

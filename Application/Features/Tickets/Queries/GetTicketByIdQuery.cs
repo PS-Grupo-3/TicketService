@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Features.Tickets.Models.Responses;
+using MediatR;
 
 namespace Application.Features.Tickets.Queries
 {
-    public class GetTicketByIdQuery
-    {
-    }
+    public record GetTicketByIdQuery(Guid ticketId) : IRequest<TicketResponse>;
 }

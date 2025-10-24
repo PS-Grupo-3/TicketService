@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\TicketService\\TicketService.csproj": {}
+    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\TicketService.csproj": {}
   },
   "projects": {
-    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Application\\Application.csproj": {
+    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Application\\Application.csproj",
+        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Deivid\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Application\\obj\\",
+        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\Domain.csproj"
+              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\Domain.csproj": {
+    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Deivid\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\obj\\",
+        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -148,14 +148,14 @@
         }
       }
     },
-    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Deivid\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\obj\\",
+        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -176,11 +176,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Application\\Application.csproj": {
-                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Application\\Application.csproj"
+              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj": {
+                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj"
               },
-              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Domain\\Domain.csproj"
+              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -203,17 +203,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.9, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.9, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.9, )"
+              "version": "[9.0.10, )"
             }
           },
           "imports": [
@@ -236,14 +236,14 @@
         }
       }
     },
-    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\TicketService\\TicketService.csproj": {
+    "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\TicketService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\TicketService\\TicketService.csproj",
+        "projectUniqueName": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\TicketService.csproj",
         "projectName": "TicketService",
-        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\TicketService\\TicketService.csproj",
+        "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\TicketService.csproj",
         "packagesPath": "C:\\Users\\Deivid\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\TicketService\\obj\\",
+        "outputPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -264,8 +264,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\Infrastructure.csproj"
+              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj": {
+                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Application\\Application.csproj"
+              },
+              "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -289,6 +292,12 @@
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[8.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

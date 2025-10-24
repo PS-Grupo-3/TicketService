@@ -1,0 +1,75 @@
+[
+  {
+    "ContainingType": "TicketService.Controllers.TicketController",
+    "Method": "Create",
+    "RelativePath": "api/v1/Ticket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.Features.Tickets.Models.Requests.TicketRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketService.Controllers.TicketController",
+    "Method": "GetAlltickets",
+    "RelativePath": "api/v1/Ticket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketService.Controllers.TicketController",
+    "Method": "Update",
+    "RelativePath": "api/v1/Ticket/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.Models.Requests.TicketUpdateRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketService.Controllers.TicketController",
+    "Method": "GetTicketById",
+    "RelativePath": "api/v1/Ticket/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketService.Controllers.TicketStatusController",
+    "Method": "GetAllStatuses",
+    "RelativePath": "api/v1/TicketStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

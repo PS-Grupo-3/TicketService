@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\TicketService\\",
+  "WorkspaceRootPath": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1568964-26BD-4D31-BC89-2E29AD9D3BDE}|..\\Infrastructure\\Infrastructure.csproj|d:\\facultad\\proyecto de software\\tpgrupal-ticketech\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1568964-26BD-4D31-BC89-2E29AD9D3BDE}|..\\Infrastructure\\Infrastructure.csproj|d:\\facultad\\proyecto de software\\tpgrupal-tocketech\\backend\\infrastructure\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{347BF574-C806-4E09-8EFD-685E5BA7FB7F}|TicketService.csproj|d:\\facultad\\proyecto de software\\tpgrupal-tocketech\\backend\\ticketservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347BF574-C806-4E09-8EFD-685E5BA7FB7F}|TicketService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -12,7 +16,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 656,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -22,14 +26,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\AppDbContext.cs",
-              "ToolTip": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TickeTech\\Infrastructure\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAvAAAAAAAAAA==",
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "..\\Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T15:48:36.184Z",
+              "WhenOpened": "2025-10-24T00:23:11.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Facultad\\Proyecto de Software\\TPGrupal-TockeTech\\Backend\\TicketService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T21:55:01.41Z",
               "EditorCaption": ""
             }
           ]

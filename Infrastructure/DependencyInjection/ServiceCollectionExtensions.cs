@@ -1,14 +1,7 @@
-﻿using Application.Interfaces;
-using Infrastructure.Data;
-using Infrastructure.Repositories;
+﻿using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.DependencyInjection
 {
@@ -16,10 +9,14 @@ namespace Infrastructure.DependencyInjection
     {
        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
+            // Base de datos
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped<ITicketRepository, TicketRepository>();
+            // MediatR
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+
+            // services..
 
             return services;
         }
