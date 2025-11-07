@@ -1,0 +1,4 @@
+# Carpetas de compilación
+bin/
+obj/
+.vs/
