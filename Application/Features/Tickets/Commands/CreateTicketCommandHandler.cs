@@ -20,12 +20,14 @@ namespace Application.Features.Tickets.Commands
         private readonly ITicketCommand _ticketCommand;
         private readonly ITicketQuery _ticketQuery;
         private readonly IEventSeatCommand _eventSeatCommand;
+        private readonly IEventSeatQuery _eventSeatQuery;
         private readonly ITicketStatusQuery _ticketStatusQuery;
 
-        public CreateTicketCommandHandler(ITicketCommand command, IEventSeatCommand eventCommand, ITicketStatusQuery ticketStatusQuery, ITicketQuery ticketQuery)
+        public CreateTicketCommandHandler(ITicketCommand command, IEventSeatCommand eventCommand, IEventSeatQuery eventSeatQuery, ITicketStatusQuery ticketStatusQuery, ITicketQuery ticketQuery)
         {
             _ticketCommand = command;
             _eventSeatCommand = eventCommand;
+            _eventSeatQuery = eventSeatQuery;
             _ticketStatusQuery = ticketStatusQuery;
             _ticketQuery = ticketQuery;
         }
@@ -34,44 +36,36 @@ namespace Application.Features.Tickets.Commands
         {
             var dto = request.Request;
 
-            if(dto.UserId == null)
+            if(dto.UserId == Guid.Empty)
             {
                 throw new ArgumentException("Debe ingresar un Id de usuario");
             }
-            if(dto.EventId == null)
+            if(dto.Seats == null || dto.Seats.Count == 0)
             {
-                throw new ArgumentException("Debe ingresar un Id de evento");
+                throw new ArgumentException("Debe ingresar al menos un asiento para crear el ticket");
             }
-            if(dto.EventSeats.Count == 0)
-            {
-                throw new ArgumentException("Debe reservar como mínimo un asiento");
-            }
-
+            // crear el ticket
             var ticket = new Ticket
             {
                 TicketId = Guid.NewGuid(),
                 UserId = dto.UserId,
                 EventId = dto.EventId,
-                StatusId = 3, // inicia como habilitado
+                StatusId = 3, // inicia como disponible
                 StatusRef = await _ticketStatusQuery.GetTicketStatusById(3),
                 EventSeats = new List<Domain.Entities.EventSeat>(),
                 Created = DateTime.UtcNow,
                 Updated = DateTime.UtcNow,
             };
-            await _ticketCommand.InsertTicket(ticket);
-
-            foreach(var item in dto.EventSeats)
+            // agregar los asientos al ticket y actualizar el estado de los asientos
+            foreach (var seat in dto.Seats)
             {
-                var eventSeat = new Domain.Entities.EventSeat
-                {
-                    EventSeatId = Guid.NewGuid(),
-                    EventSectorId = item.EventSectorId,
-                    SeatId = item.SeatId,
-                    Price = item.Price,
-                    TicketId = ticket.TicketId,
-                };
-                await _eventSeatCommand.InsertEventSeat(eventSeat);
+                var eventSeat = await _eventSeatQuery.GetEventSeatsByEventSectorIdAsync(seat.EventId, seat.EventSectorId, seat.SeatId);
+                eventSeat.StatusId = 2; // reservado
+                await _eventSeatCommand.UpdateEventSeat(eventSeat);
+                ticket.EventSeats.Add(eventSeat);
             }
+            // cargo el ticket en la base de datos
+            await _ticketCommand.InsertTicket(ticket);
 
             var saveTicket = await _ticketQuery.GetTicketById(ticket.TicketId);
             return new TicketResponse

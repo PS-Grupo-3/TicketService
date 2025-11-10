@@ -13,5 +13,7 @@ namespace Domain.Entities
 
         // Relashionsships
         public ICollection<Ticket> Tickets { get; set; }
+
+        public ICollection<EventSeat> EventSeats { get; set; }
     }
 }

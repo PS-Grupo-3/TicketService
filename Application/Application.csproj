@@ -15,4 +15,9 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\External\" />
+    <Folder Include="Models\External\Responses\" />
+  </ItemGroup>
+
 </Project>

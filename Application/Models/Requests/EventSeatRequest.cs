@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Application.Models.External.Requests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,6 @@ namespace Application.Models.Requests
 {
     public class EventSeatRequest
     {
-        public Guid EventSectorId { get; set; }
-        public long SeatId { get; set; }
-        public Decimal Price { get; set; }
-        public bool IsAvaliable { get; set; }
-        public Guid TicketId { get; set; }
+       public EventRequestExternal? Event { get; set; }
     }
 }

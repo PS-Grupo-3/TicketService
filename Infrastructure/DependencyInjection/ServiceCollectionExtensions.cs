@@ -31,6 +31,8 @@ namespace Infrastructure.DependencyInjection
             services.AddScoped<IEventSeatCommand, EventSeatCommand>();
             services.AddScoped<IEventSeatQuery, EventSeatQuery>();
 
+            // cliente HTTP, conexión con servicio externo
+
             return services;
         }
     }

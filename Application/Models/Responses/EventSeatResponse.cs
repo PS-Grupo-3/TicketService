@@ -9,8 +9,11 @@ namespace Application.Models.Responses
     public class EventSeatResponse
     {
         public Guid EventSeatId { get; set; }
+        public Guid EventId { get; set; }       
         public Guid EventSectorId { get; set; }
         public long SeatId { get; set; }
         public Decimal Price { get; set; }
+        public Guid? TicketId { get; set; } 
+        public int StatusId { get; set; }
     }
 }

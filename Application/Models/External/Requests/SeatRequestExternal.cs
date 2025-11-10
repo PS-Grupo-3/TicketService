@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Models.Requests
+namespace Application.Models.External.Requests
 {
-    public class EventSeatTicketRequest
+    public class SeatRequestExternal
     {
-        public Guid EventSectorId { get; set; }
         public long SeatId { get; set; }
-        public Decimal Price { get; set; }
     }
 }

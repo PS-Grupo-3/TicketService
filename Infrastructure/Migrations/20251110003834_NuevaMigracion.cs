@@ -53,14 +53,22 @@ namespace Infrastructure.Migrations
                 columns: table => new
                 {
                     EventSeatId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    EventId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     EventSectorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SeatId = table.Column<long>(type: "bigint", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    TicketId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    TicketId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    StatusId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_EventSeat", x => x.EventSeatId);
+                    table.ForeignKey(
+                        name: "FK_EventSeat_TicketStatus_StatusId",
+                        column: x => x.StatusId,
+                        principalTable: "TicketStatus",
+                        principalColumn: "StatusID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_EventSeat_Ticket_TicketId",
                         column: x => x.TicketId,
@@ -79,6 +87,11 @@ namespace Infrastructure.Migrations
                     { 3, "Sold" },
                     { 4, "Expired" }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EventSeat_StatusId",
+                table: "EventSeat",
+                column: "StatusId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EventSeat_TicketId",

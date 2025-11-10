@@ -27,7 +27,7 @@ namespace Infrastructure.Data
                 entity.ToTable("Ticket");
                 entity.HasKey(t => t.TicketId);
                 entity.Property(t => t.UserId)
-                    .IsRequired();
+                    .IsRequired();            
                 entity.Property(t => t.EventId)
                     .IsRequired();
                 entity.Property(t => t.StatusId)
@@ -58,12 +58,17 @@ namespace Infrastructure.Data
             {
                 entity.ToTable("EventSeat");
                 entity.HasKey(e => e.EventSeatId);
+                entity.Property(t => t.EventId)
+                    .IsRequired();
                 entity.Property(e => e.EventSectorId)
                     .IsRequired();
                 entity.Property(e => e.SeatId)
                     .IsRequired();
                 entity.Property(e => e.Price)
                     .HasColumnType("decimal(10,2)")
+                    .IsRequired();
+                entity.Property(e => e.TicketId);
+                entity.Property(e => e.StatusId)
                     .IsRequired();
             });
 
@@ -82,6 +87,14 @@ namespace Infrastructure.Data
                 .WithMany(ticket => ticket.EventSeats)
                 .HasForeignKey(ES => ES.TicketId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            // uno a muchos - TicketStatus EventSeat
+            modelBuilder.Entity<EventSeat>()
+                .HasOne(ES => ES.StatusRef)
+                .WithMany(TStatus => TStatus.EventSeats)
+                .HasForeignKey(ES => ES.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

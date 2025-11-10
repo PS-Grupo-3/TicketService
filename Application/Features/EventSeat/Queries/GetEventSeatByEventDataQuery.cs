@@ -8,5 +8,5 @@ using System.Threading.Tasks;
 
 namespace Application.Features.EventSeat.Queries
 {
-    public record GetAllEventSeatQuery() : IRequest<List<EventSeatResponse>>;
+    public record GetEventSeatByEventDataQuery(Guid eventId, Guid eventSectorId, long seatId) : IRequest<EventSeatResponse?>;
 }

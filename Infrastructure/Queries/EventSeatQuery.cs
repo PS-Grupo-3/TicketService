@@ -28,5 +28,14 @@ namespace Infrastructure.Queries
         {
             return await _context.EventSeats.ToListAsync();
         }
+
+        public async Task<EventSeat> GetEventSeatsByEventSectorIdAsync(Guid eventId, Guid eventSectorId, long seatId)
+        {
+            var query = _context.EventSeats
+                .Include(ES => ES.StatusRef)
+                .AsQueryable();
+            query = query.Where(ES => ES.EventId == eventId && ES.EventSectorId == eventSectorId && ES.SeatId == seatId);
+            return await query.FirstOrDefaultAsync();
+        }
     }
 }

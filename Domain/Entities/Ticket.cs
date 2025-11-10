@@ -9,7 +9,7 @@ namespace Domain.Entities
     public class Ticket
     {
         public Guid TicketId { get; set; }
-        public Guid UserId { get; set; }
+        public Guid UserId { get; set; } = Guid.Empty;
         public Guid EventId { get; set; }
         public int StatusId { get; set; }
         public DateTime Created { get; set; }

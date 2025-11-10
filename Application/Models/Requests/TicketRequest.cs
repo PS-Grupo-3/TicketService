@@ -12,6 +12,6 @@ namespace Application.Features.Tickets.Models.Requests
     {
         public Guid UserId { get; set; }
         public Guid EventId { get; set; }
-        public List<EventSeatTicketRequest> EventSeats { get; set; }
+        public List<SeatTicketRequest>? Seats { get; set; }
     }
 }

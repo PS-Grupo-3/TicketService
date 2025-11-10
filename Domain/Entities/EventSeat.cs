@@ -9,12 +9,15 @@ namespace Domain.Entities
     public class EventSeat
     {
         public Guid EventSeatId { get; set; }
+        public Guid EventId { get; set; }
         public Guid EventSectorId { get; set; }
         public long SeatId { get; set; }
         public Decimal Price { get; set; }
-        public Guid TicketId { get; set; }
+        public Guid? TicketId { get; set; } = Guid.Empty;
+        public int StatusId { get; set; }
 
         // Relashionsships
-        public Ticket TicketRef { get; set; }
+        public Ticket? TicketRef { get; set; }
+        public TicketStatus? StatusRef { get; set; }
     }
 }

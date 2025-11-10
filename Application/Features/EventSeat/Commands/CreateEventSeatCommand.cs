@@ -9,5 +9,5 @@ using System.Threading.Tasks;
 
 namespace Application.Features.EventSeat.Commands
 {
-    public record CreateEventSeatCommand(EventSeatRequest request) : IRequest<EventSeatResponse>;
+    public record CreateEventSeatCommand(EventSeatRequest request) : IRequest<EventSeatsResponse>;
 }

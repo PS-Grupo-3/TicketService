@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251103164041_NuevaMigracion")]
+    [Migration("20251110003834_NuevaMigracion")]
     partial class NuevaMigracion
     {
         /// <inheritdoc />
@@ -31,6 +31,9 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("EventId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("EventSectorId")
                         .HasColumnType("uniqueidentifier");
 
@@ -40,10 +43,15 @@ namespace Infrastructure.Migrations
                     b.Property<long>("SeatId")
                         .HasColumnType("bigint");
 
-                    b.Property<Guid>("TicketId")
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("TicketId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("EventSeatId");
+
+                    b.HasIndex("StatusId");
 
                     b.HasIndex("TicketId");
 
@@ -119,11 +127,18 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.EventSeat", b =>
                 {
+                    b.HasOne("Domain.Entities.TicketStatus", "StatusRef")
+                        .WithMany("EventSeats")
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Ticket", "TicketRef")
                         .WithMany("EventSeats")
                         .HasForeignKey("TicketId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("StatusRef");
 
                     b.Navigation("TicketRef");
                 });
@@ -146,6 +161,8 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.TicketStatus", b =>
                 {
+                    b.Navigation("EventSeats");
+
                     b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
