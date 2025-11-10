@@ -47,7 +47,7 @@ namespace Application.Features.Tickets.Commands
             // crear el ticket
             var ticket = new Ticket
             {
-                TicketId = Guid.NewGuid(),
+                TicketId = dto.TicketId,
                 UserId = dto.UserId,
                 EventId = dto.EventId,
                 StatusId = 3, // inicia como disponible
